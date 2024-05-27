@@ -1,0 +1,89 @@
+
+# Fashion Recommendation System
+
+This project is a fashion recommendation system that takes an image of clothing as input and returns similar images from a predefined dataset. It uses a pre-trained ResNet50 model for feature extraction and cosine similarity for finding similar images. The user interface is built with Streamlit.
+
+## Features
+
+- Upload an image of clothing.
+- Automatically processes a predefined dataset of clothing images.
+- Finds and displays the top 5 similar images from the dataset.
+
+## Prerequisites
+
+- Python 3.6 or higher
+- Required Python libraries (TensorFlow, Keras, Streamlit, NumPy, scikit-learn, OpenCV, Pillow)
+- Dataset  https://www.kaggle.com/datasets/paramaggarwal/fashion-product-images-small
+
+## Installation
+
+1. **Clone the repository**:
+   
+   git clone repository_link
+   
+   
+
+2. **Install the required libraries**:
+   
+   pip install tensorflow keras numpy streamlit opencv-python scikit-learn pillow   --on terminal
+
+
+3. **Prepare your dataset**:
+   - Place all your clothing images in a directory (e.g., `dataset/`).
+   - Update the `DATASET_PATH` variable in `App.py` with the path to your dataset directory.
+
+## Running the Application
+
+1. **Run the Streamlit app**:
+   
+   streamlit run fashion_recommendation.py  --on terminal
+
+
+2. **Upload an Image**:
+   - Open the app in your web browser.
+   - Click "Choose an image..." to upload a clothing image.
+
+3. **View Results**:
+   - The app displays the uploaded image.
+   - It searches for and shows the top 5 similar images from the predefined dataset.
+
+## Project Structure
+
+- `fashion_recommendation.py`: The main script that runs the application.
+- `features.npy`: A file where the extracted features of the dataset images are saved.
+- `image_paths.txt`: A file that stores the paths of the dataset images.
+
+## How It Works
+
+1. **Feature Extraction**:
+   - The script uses a pre-trained ResNet50 model to extract features from each image in the dataset.
+   - Features are saved to `features.npy` and image paths to `image_paths.txt`.
+
+2. **Finding Similar Images**:
+   - When an image is uploaded, the script extracts its features using the same ResNet50 model.
+   - It then calculates the cosine similarity between the uploaded image features and the dataset image features.
+   - The top 5 similar images are displayed.
+
+## Customization
+
+- **Dataset**: Replace the images in the `dataset/` directory with your own images.
+- **Model**: Modify the script to use a different pre-trained model if needed.
+
+## Example
+
+To run the app and see it in action, follow these steps:
+
+1. Place your dataset images in the `dataset/` directory.
+2. Run the Streamlit app:
+   
+   streamlit App.py   --on terminal
+
+3. Upload an image and view the similar images displayed by the app.
+
+
+
+## project done by
+
+@Pravee0305         https://github.com/Pravee0305
+@Shrima10           https://github.com/Shrima10
+@SANGARAPANDIAN     https://github.com/SANGARAPANDIAN
